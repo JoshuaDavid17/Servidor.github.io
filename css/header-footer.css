@@ -1,0 +1,112 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: cursive;
+    scroll-behavior: smooth;
+    user-select: none;
+    opacity: 0;
+    animation: aparecer .8s linear both ;
+}
+
+@keyframes aparecer {
+    from{
+
+        opacity: 0.5;
+    }to{
+
+        opacity: 1;
+    }
+}
+.header {
+
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+}
+
+
+.navbar_list {
+
+    min-height: 70px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    animation: header .2s both;
+    animation-timeline: scroll();
+    animation-range: 0px 200px;
+
+
+}
+
+.navbar_item {
+
+    list-style: none;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    
+}
+
+.navbar_item::before {
+
+    content: " ";
+    width: 2px;
+    height: 1px;
+    top: 110%;
+    background-color: currentColor;
+    position: absolute;
+    transition: width .2s, opacity .2s ease-in-out;
+    opacity: 0;
+    animation: before .2s both;
+    animation-timeline: scroll();
+    animation-range: 0px 200px;
+
+}
+
+.navbar_item:hover::before {
+
+    width: 150%;
+    opacity: 1;
+
+}
+
+main{
+
+    display: flex;
+    justify-content: center;
+ 
+}
+
+footer{
+
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes header {
+
+    from {}
+
+    to {
+
+        background-color: black;
+        color: white;
+       
+
+    }
+
+}
+
+ 

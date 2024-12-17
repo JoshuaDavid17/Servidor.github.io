@@ -1,0 +1,41 @@
+ .container{
+
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+
+}
+
+img{
+
+    width: 200px;
+    transition: transform 0.2s linear ;
+}
+
+img:hover{
+
+    transform: translateY(-10px);
+    transition: transform 0.2s linear ;
+    
+}
+
+.item a{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.item a:hover {
+
+    color: orangered;
+    transition:  color 0.2s linear;
+}
